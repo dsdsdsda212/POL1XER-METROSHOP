@@ -76,16 +76,6 @@ footer{position:relative;margin-top:50px;padding:50px 20px 20px;background:#111;
 .ticker{margin:15px 0;width:100%;overflow:hidden;white-space:nowrap;box-sizing:border-box;border-top:1px solid var(--neon);border-bottom:1px solid var(--neon);padding:10px 0;color:var(--neon);font-weight:700;text-shadow:var(--neon-glow);animation:scrollText 15s linear infinite;}
 @keyframes scrollText{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
 .footer-stats{margin-top:10px;font-size:14px;color:#fff;text-shadow:0 0 15px #b400ff33;}
-  @media (max-width: 600px) {
-  .shop-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 10px;
-  }
-  .item h3 { font-size: 12px; }
-  .item p { font-size: 12px; }
-  .btn { padding: 6px 10px; font-size: 12px; }
-}
-
 </style>
 </head>
 <body>
@@ -102,7 +92,7 @@ footer{position:relative;margin-top:50px;padding:50px 20px 20px;background:#111;
 <button>Каталог</button>
 <button>Популярное</button>
 <button>Контакты</button>
-<button>Поддержка</button>
+<button onclick="tg.openLink('https://t.me/pol1xer')">Поддержка</button>
 </div>
 </header>
 
@@ -120,7 +110,7 @@ footer{position:relative;margin-top:50px;padding:50px 20px 20px;background:#111;
 
 <div id="chatWindow">
 <h3>Поддержка</h3>
-<button onclick="openTelegramChat()">Открыть Telegram</button>
+<button onclick="openTelegramChat()">Написать в Telegram @pol1xer</button>
 <button class="close-cart" onclick="document.getElementById('chatWindow').style.display='none'">Закрыть</button>
 </div>
 
@@ -154,7 +144,7 @@ footer{position:relative;margin-top:50px;padding:50px 20px 20px;background:#111;
 <div class="footer-bg"></div>
 <div class="footer-content">
 <div class="footer-links">
-<a href="https://t.me" target="_blank">Telegram</a>
+<a href="https://t.me/pol1xer" target="_blank">@pol1xer</a>
 <a href="https://discord.com" target="_blank">Discord</a>
 <a href="https://vk.com" target="_blank">VK</a>
 <a href="mailto:support@metroshop.com">Email</a>
@@ -191,8 +181,13 @@ function payCart(){tg.sendData(JSON.stringify({type:'payment',items:cart}));aler
 function filterCategory(cat){document.querySelectorAll('.item').forEach(i=>{i.style.display=(cat==='all'||i.dataset.category===cat)?'block':'none';});}
 
 // Поддержка
-document.getElementById('chatBtn').onclick=()=>{document.getElementById('chatWindow').style.display='block';}
-function openTelegramChat(){tg.openLink('https://t.me/YOUR_SUPPORT_USERNAME');}
+document.getElementById('chatBtn').onclick=()=>{
+    tg.openLink('https://t.me/pol1xer');
+}
+
+function openTelegramChat(){
+    tg.openLink('https://t.me/pol1xer');
+}
 
 // VIP
 let vip=false;
@@ -211,10 +206,7 @@ for(let i=0;i<70;i++){particles.push({x:Math.random()*canvas.width,y:Math.random
 function animateParticles(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(255,0,255,0.6)';ctx.fill();p.x+=p.dx;p.y+=p.dy;if(p.x<0||p.x>canvas.width)p.dx*=-1;if(p.y<0||p.y>canvas.height)p.dy*=-1;});requestAnimationFrame(animateParticles);}
 animateParticles();
 window.addEventListener('resize',()=>{canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight;});
- 
 </script>
-
-
 
 </body>
 </html>
