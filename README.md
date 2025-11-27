@@ -125,7 +125,7 @@ footer{position:relative;margin-top:50px;padding:50px 20px 20px;background:#111;
 </div>
 
 <div class="shop-grid">
-<div class="item" data-category="armor"><div class="sale">SALE</div><img src="[0870aa5c571f4c1199380020ceca6dd5_1000027912.image.jpg](https://github.com/dsdsdsda212/POL1XER-METROSHOP/blob/main/0870aa5c571f4c1199380020ceca6dd5_1000027912.image.jpg?raw=true)"><h3>Броня Lv.6</h3><p>700 ₽</p><button class="btn" onclick="addToCart('Броня Lv.6',700)">Купить</button></div>
+<div class="item" data-category="armor"><div class="sale">SALE</div><img src="0870aa5c571f4c1199380020ceca6dd5_1000027912.image.jpg"><h3>Броня Lv.6</h3><p>700 ₽</p><button class="btn" onclick="addToCart('Броня Lv.6',700)">Купить</button></div>
 <div class="item" data-category="armor"><img src="13563520000b454d9bbf91528b161665_1000027913.preview.jpg"><h3>Шлем Lv.6</h3><p>450 ₽</p><button class="btn" onclick="addToCart('Шлем Lv.6',450)">Купить</button></div>
 <div class="item" data-category="loot"><div class="sale">SALE</div><img src="c24e36c968bb47aa968c5ad34326918d_1000027917.image.png"><h3>Фиолетовый Лут</h3><p>300 ₽</p><button class="btn" onclick="addToCart('Фиолетовый Лут',300)">Купить</button></div>
 <div class="item" data-category="vip"><div class="vip-tag">VIP</div><img src="7c4bbfd998cac612d13670027269beae.preview.jpg"><h3>МК14 ВЫШКА</h3><p>900 ₽</p><button class="btn" onclick="addToCart('Золотой Лут',900)">Купить</button></div>
